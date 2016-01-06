@@ -1,6 +1,6 @@
 ﻿function findDuplicateFiles {
     Param([System.IO.DirectoryInfo]$Directory = ".")
-    [array]$files = Get-ChildItem -Recurse $Directory
+    [array]$files = Get-ChildItem -Recurse $Directory | Where-Object {$_ -is [System.IO.FileInfo]} 
     [System.Collections.ArrayList]$return = @()
 
     for($i = 0; $i -lt $files.Count; $i++){
