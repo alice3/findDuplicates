@@ -7,8 +7,8 @@
         [System.IO.FileInfo]$right
     )
     
-    $leftBuffer = New-Object byte[] 100;
-    $rightBuffer = New-Object byte[] 100;
+    $leftBuffer = New-Object byte[] 4096
+    $rightBuffer = New-Object byte[] 4096
     
     $leftStream = [System.IO.File]::OpenRead($left.FullName)
     $rightStream = [System.IO.File]::OpenRead($right.FullName)
