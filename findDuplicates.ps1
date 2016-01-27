@@ -33,7 +33,7 @@
     }
 }
 
-function findDuplicateFiles {
+function Find-DuplicateFiles {
     Param([System.IO.DirectoryInfo]$Directory = ".")
     $sizes = @{}
     [System.Collections.ArrayList]$return = @()
